@@ -72,6 +72,8 @@ class GiveawaysManager extends EventEmitter {
                     '\n' +
                     (giveaway.hostedBy ? giveaway.messages.hostedBy.replace('{user}', giveaway.hostedBy) : '')
             )
+            .setThumbnail(giveaway.thumbnail)
+			.setImage(giveaway.imgembed)
             .setTimestamp(new Date(giveaway.endAt).toISOString());
         return embed;
     }
@@ -112,6 +114,8 @@ class GiveawaysManager extends EventEmitter {
             .setColor(giveaway.embedColorEnd)
             .setFooter(giveaway.messages.endedAt)
             .setDescription(descriptionString(formattedWinners))
+            .setThumbnail(giveaway.thumbnail)
+			.setImage(giveaway.imgembed)
             .setTimestamp(new Date(giveaway.endAt).toISOString());
         return embed;
     }
@@ -132,6 +136,8 @@ class GiveawaysManager extends EventEmitter {
                     '\n' +
                     (giveaway.hostedBy ? giveaway.messages.hostedBy.replace('{user}', giveaway.hostedBy) : '')
             )
+            .setThumbnail(giveaway.thumbnail)
+			.setImage(giveaway.imgembed)
             .setTimestamp(new Date(giveaway.endAt).toISOString());
         return embed;
     }
@@ -208,6 +214,8 @@ class GiveawaysManager extends EventEmitter {
                 guildID: channel.guild.id,
                 ended: false,
                 prize: options.prize,
+                thumbnail: typeof options.thumbnail === 'string' ? options.thumbnail : undefined,
+				imgembed: typeof options.imgembed === 'string' ? options.imgembed : undefined,
                 hostedBy: options.hostedBy ? options.hostedBy.toString() : null,
                 messages: options.messages,
                 reaction: options.reaction,

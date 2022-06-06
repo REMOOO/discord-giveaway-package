@@ -45,6 +45,8 @@ const giveawaySchema = new mongoose.Schema({
             pluralS: Boolean,
         },
     },
+    thumbnail: String,
+    imgembed: String,
     hostedBy: String,
     winnerIDs: [String],
     reaction: mongoose.Mixed,

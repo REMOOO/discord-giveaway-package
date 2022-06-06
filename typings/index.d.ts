@@ -72,6 +72,8 @@ declare module 'discord-giveaways' {
         embedColorEnd?: ColorResolvable;
         reaction?: EmojiIdentifierResolvable;
         messages?: Partial<GiveawaysMessages>;
+        thumbnail?: string;
+        imgembed?: string;
         extraData?: any;
         lastChance?: LastChanceOptions;
     }
@@ -113,6 +115,8 @@ declare module 'discord-giveaways' {
         public hostedBy: User | null;
         public manager: GiveawaysManager;
         public message: Message | null;
+        public thumbnail?: string;
+        public imgembed?: string;
         public messageID: Snowflake | null;
         public messages: GiveawaysMessages;
         public options: GiveawayData;
@@ -152,6 +156,8 @@ declare module 'discord-giveaways' {
         addTime?: number;
         setEndTimestamp?: number;
         newMessages?: Partial<GiveawaysMessages>;
+        newThumbnail?: string;
+        newImgembed?: string;
         newBonusEntries?: BonusEntry[];
         newExtraData?: any;
     }
@@ -179,6 +185,8 @@ declare module 'discord-giveaways' {
         bonusEntries?: string;
         embedColor?: ColorResolvable;
         embedColorEnd?: ColorResolvable;
+        thumbnail?: string;
+        imgembed?: string;
         hostedBy?: string | null;
         extraData?: any;
         lastChance?: LastChanceOptions;

@@ -88,6 +88,16 @@ class Giveaway extends EventEmitter {
          */
         this.messages = options.messages;
         /**
+         * The URL appearing as the thumbnail on the giveaway embed.
+         * @type {string}
+         */
+         this.thumbnail = options.thumbnail;
+         /**
+         * The URL appearing as the imgembed on the giveaway embed.
+         * @type {string}
+         */
+         this.imgembed = options.imgembed;
+        /**
          * Extra data concerning this giveaway
          * @type {any}
          */
@@ -295,6 +305,8 @@ class Giveaway extends EventEmitter {
             winnerCount: this.winnerCount,
             prize: this.prize,
             messages: this.messages,
+            thumbnail: this.thumbnail,
+			imgembed: this.imgembed,
             hostedBy: this.options.hostedBy,
             embedColor: this.options.embedColor,
             embedColorEnd: this.options.embedColorEnd,
@@ -463,6 +475,8 @@ class Giveaway extends EventEmitter {
             }
             // Update data
             if (Number.isInteger(options.newWinnerCount) && options.newWinnerCount > 0) this.winnerCount = options.newWinnerCount;
+            if (typeof options.newThumbnail === 'string') this.thumbnail = options.newThumbnail;
+			if (typeof options.newImgembed === 'string') this.imgembed = options.newImgembed;
             if (typeof options.newPrize === 'string') this.prize = options.newPrize;
             if (options.addTime && !isNaN(options.addTime)) this.endAt = this.endAt + options.addTime;
             if (options.setEndTimestamp && !isNaN(options.setEndTimestamp)) this.endAt = options.setEndTimestamp;

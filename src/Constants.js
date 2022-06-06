@@ -39,6 +39,8 @@ exports.GiveawayMessages = {};
  * @property {Discord.ColorResolvable} [embedColorEnd] The giveaway embeds color when they are ended
  * @property {Discord.EmojiIdentifierResolvable} [reaction] The reaction to participate to the giveaways
  * @property {GiveawayMessages} [messages] The giveaway messages
+ * @property {string} [thumbnail] The URL appearing as the thumbnail on the giveaway embed.
+ * @property {string} [imgembed] The URL appearing as the imgembed on the giveaway embed.
  * @property {any} [extraData] The extra data value for this giveaway
  * @property {LastChanceOptions} [lastChance] The last chance system options
  */
@@ -169,6 +171,8 @@ exports.defaultRerollOptions = {
  * @property {number} [addTime] Number of milliseconds to add to the giveaway duration
  * @property {number} [setEndTimestamp] The timestamp of the new end date
  * @property {GiveawayMessages} [newMessages] The new giveaway messages
+ * @property {string} [newThumbnail] The new thumbnail url.
+ * @property {string} [newImgembed] The new imgembed url.
  * @property {any} [newExtraData] The new extra data value for this giveaway
  * @property {BonusEntry[]} [newBonusEntries] The new BonusEntry objects
  */
@@ -185,6 +189,8 @@ exports.GiveawayEditOptions = {};
  * @property {GiveawayMessages} messages The giveaway messages
  * @property {boolean} ended Whether the giveaway is ended
  * @property {string} prize The prize of the giveaway
+ * @property {string} [thumbnail] The URL appearing as the thumbnail on the giveaway embed.
+ * @property {string} [imgembed] The URL appearing as the imgembed on the giveaway embed. 
  * @property {Discord.Snowflake} channelID The ID of the channel
  * @property {Discord.Snowflake} guildID The ID of the guild
  * @property {Discord.Snowflake?} [messageID] The ID of the message
